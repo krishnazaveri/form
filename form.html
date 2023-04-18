@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    Name : <input type="text" id="name"><br><br>
+    Email : <input type="text" id="email"><br><br>
+    Password : <input type="text" id="pass"><br><br>
+    Confirm Password : <input type="text" id="cpass"><br><br>
+    Mobile : <input type="text" id="mobile"><br><br>
+    <input type="submit" id="submit" onclick="validateform()">
+
+
+    <script>
+
+        n=document.getElementById('name');
+        e=document.getElementById('email');
+        p=document.getElementById('pass');
+        c=document.getElementById('cpass');
+        m=document.getElementById('mobile');
+        s=document.getElementById('submit');
+
+        function validateform()
+        {
+            if(n.value == "")
+            {
+                //alert("Name is Required..");
+                //document.write("Name is Required");
+                return false;
+            }
+
+            if(e.value == "")
+            {
+                alert("Email is Required..");
+                //document.write("Email is Required");
+                return false;
+            }
+
+            if(p.value == "")
+            {
+                alert("Password is Required..");
+                //document.write("Password is Required");
+                return false;
+            }
+
+            if(c.value !== p.value)
+            {
+                alert("Password not match.");
+                //document.write("Password not match.");
+                return false;
+            }
+
+            if(m.value =="")
+            {
+                alert("mobile number not valid..");
+                //document.write("Name is Required");
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>
